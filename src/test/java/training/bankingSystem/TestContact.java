@@ -9,19 +9,29 @@ import org.junit.Test;
 
 public class TestContact {
 	
+	final Contact c = new Contact();
+	
 	@Test
 	public void testAddContact(){
-		
-		final Contact c = new Contact();
-		List <PhoneNumber> phone=new ArrayList<PhoneNumber>();
-		PhoneNumber phonee=new PhoneNumber();
-		c.addPhone("8348105724");
-		phonee.setPhoneNumber("8348105724");
-		String actuals=c.getPhone().get(0).getPhoneNumber();
-		assertEquals("testmessage",actuals,phonee.getPhoneNumber());
+				
+				c.addPhone("8348105724");
+				assertEquals("testmessage",c.getPhone().get(0).getPhoneNumber(),"8348105724");
 		
 	}
 
-	
+	@Test
+	public void testaddMobile(){
+				
+				c.addMobile("022-456789");
+				assertEquals("testmessage",c.getMobile().get(0).getPhoneNumber(),"022-456789");
+		
+	}
+	@Test
+	public void testgetEmail(){
+				
+				c.addEmail("tuhin.a.das@capgemini.com");
+				assertEquals("testmessage",c.getEmail().get(0).getEmail(),"tuhin.a.das@capgemini.com");
+		
+	}
 
 }
