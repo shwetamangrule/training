@@ -11,32 +11,38 @@ public class Contact {
 	List <Email> email=new ArrayList<Email>();
 	
 	Bank bank=new Bank();
+	
 	Scanner sc=new Scanner(System.in);
 	
-	public void display() {
+
+	public void Display()
+	{
 		System.out.println("enter a phone number");
-		String pn = sc.next();
-		addPhone(pn);
+		String PhNu=sc.next();
+		System.out.println("enter a mobile address");
+		String moNo=sc.next();
+		System.out.println("enter a email address");
+		String ml=sc.next();
+		addPhone(PhNu);
+		addMobile(moNo);
+		addEmail(ml);
 	}
 	
-	public void addPhone(String pn) {
+	public void addPhone(String PhoneNumber) {
 		PhoneNumber phoneNo=new PhoneNumber();
-		phoneNo.setPhoneNumber(pn);
+		phoneNo.setPhoneNumber(PhoneNumber);
 		phone.add(phoneNo);
 	}
 	
-	public void addMobile(String mn) {
+	public void addMobile(String MobileNo) {
 		PhoneNumber mobileNo=new PhoneNumber();
-		System.out.println("enter a mobile address");
-		mn = sc.next();
-		mobileNo.setPhoneNumber(sc.next());
+		mobileNo.setPhoneNumber(MobileNo);
 		mobile.add(mobileNo);
 	}
 
-	public void addEmail() {
+	public void addEmail(String maile) {
 		Email mail=new Email();
-		System.out.println("enter a email address");
-		mail.setEmail(sc.next());
+		mail.setEmail(maile);
 		email.add(mail);
 	}
 	
