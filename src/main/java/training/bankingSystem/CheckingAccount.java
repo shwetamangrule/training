@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class CheckingAccount implements Account {
 	
-	Money money;
-	InterestRate interestRate;
-	Period interestPeriod;
-
+	Money money=new Money();
+	InterestRate interestRate=new InterestRate();
+	Period interestPeriod=new Period();
+	
+	
 	public int deposit(int depositAmmount)
 	{
 		
@@ -15,6 +16,7 @@ public class CheckingAccount implements Account {
 	}
 	public int withdrawl(int withdrawlAmmount)
 	{
+
 		return money.getMoney()-withdrawlAmmount;
 	}
 	
