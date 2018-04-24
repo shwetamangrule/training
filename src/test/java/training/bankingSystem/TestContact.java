@@ -12,7 +12,7 @@ public class TestContact {
 	@Test
 	public void testAddContact(){
 		
-		Contact c = new Contact();
+		final Contact c = new Contact();
 		List <PhoneNumber> phone=new ArrayList<PhoneNumber>();
 		PhoneNumber phonee=new PhoneNumber();
 		c.addPhone("8348105724");

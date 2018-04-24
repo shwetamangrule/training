@@ -10,7 +10,7 @@ public class Contact {
 	List <PhoneNumber> phone=new ArrayList<PhoneNumber>();
 	List <Email> email=new ArrayList<Email>();
 	
-	Bank bank=new Bank();
+	
 	
 	Scanner sc=new Scanner(System.in);
 	
