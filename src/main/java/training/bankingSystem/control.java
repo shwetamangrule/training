@@ -4,8 +4,14 @@ public class control {
 
 	public static void main(String[] args) {
 		
-		SavingAccount saveAcnt=new SavingAccount();
-		saveAcnt.getBalance();
+		CheckingAccount saveAcnt=new CheckingAccount();
+		
+		Money money=new Money();
+		money.setMoney(0);
+		//int balance=500;
+		int balance=saveAcnt.getBalance();
+		System.out.println(balance);
+		
 	}
 
 }
