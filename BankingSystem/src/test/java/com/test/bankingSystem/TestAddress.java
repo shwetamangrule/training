@@ -1,4 +1,4 @@
-package training.bankingSystem;
+package com.test.bankingSystem;
 
 import static org.junit.Assert.assertEquals;
 

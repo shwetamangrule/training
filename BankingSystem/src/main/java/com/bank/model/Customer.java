@@ -1,7 +1,7 @@
 package com.bank.model;
 public class Customer extends Account{
 	
-	private String customerId;
+	private static String customerId;
 	private String firstName;
 	private String lastName;
 	private float currentBalance;
@@ -52,7 +52,7 @@ public class Customer extends Account{
 	/**
 	 * @return the customerId
 	 */
-	public String getCustomerId() {
+	public static String getCustomerId() {
 		return customerId;
 	}
 	/**
