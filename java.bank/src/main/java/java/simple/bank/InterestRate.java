@@ -1,4 +1,4 @@
-package java.bank;
+package java.simple.bank;
 
 public class InterestRate {
 	int interestRate;

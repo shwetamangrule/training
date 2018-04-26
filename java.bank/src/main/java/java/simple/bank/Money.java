@@ -1,4 +1,4 @@
-package java.bank;
+package java.simple.bank;
 
 public class Money {
 
@@ -9,7 +9,7 @@ public class Money {
 		return money;
 	}
 
-	public void setMoney(int money)
+	public void setMoney(float money)
 	{
 		this.money = money;
 	}

@@ -1,4 +1,4 @@
-package java.bank;
+package java.simple.bank;
 public class Contact extends Address 
 {
 	private long phone;
