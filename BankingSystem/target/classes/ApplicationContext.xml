@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd ">
+
+	
+	<bean id="Contact" class="com.bank.model.Contact">
+		<constructor-arg value="123456" index="0"></constructor-arg>
+		<constructor-arg value="02286" index="1"></constructor-arg>
+		<constructor-arg value="tuhin@das" index="2"></constructor-arg>
+
+	</bean>
+
+	<bean id="Address" class="com.bank.model.Address">
+		<constructor-arg value="Sector-20" index="0"></constructor-arg>
+		<constructor-arg value="405" index="1"></constructor-arg>
+		<constructor-arg value="800508" index="2"></constructor-arg>
+		<constructor-arg value="mumbai" index="3"></constructor-arg>
+
+
+	</bean>
+
+	<bean id="Customer" class="com.bank.model.Customer">
+		<constructor-arg value="1" index="0"></constructor-arg>
+		<constructor-arg value="tuhin" index="1"></constructor-arg>
+		<constructor-arg value="das" index="2"></constructor-arg>
+		<constructor-arg value="2000" index="3"></constructor-arg>
+		<constructor-arg index="4">
+			<ref bean="Address" />
+		</constructor-arg>
+		<constructor-arg index="5">
+			<ref bean="Contact" />
+		</constructor-arg>
+
+	</bean>
+
+
+
+</beans>

@@ -1,8 +1,10 @@
 package training.bankingSystem;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import com.bank.model.Address;
 
 public class TestAddress {
 
