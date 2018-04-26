@@ -1,7 +1,7 @@
-package java.simple.bank;
+package simplejava.bank;
 
 public class InterestRate {
-	int interestRate;
+	int interestRate=5;
 	
 	public int getInterestRate()
 	{

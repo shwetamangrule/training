@@ -1,4 +1,4 @@
-package java.simple.bank;
+package simplejava.bank;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -30,10 +30,10 @@ public class App {
 		final Customer customer = new Customer("Tuhin", "Das", bankname);
 		LOGGER.info("Customer Details are" + customer);
 		
-		Account account = new CheckingAccount();;
+		Account account = null;
+		account=new CheckingAccount();
 
-				if (account instanceof CheckingAccount)// checking account object
-				{
+				
 					LOGGER.info("Enter the amount to deposit");
 					float depositAmount = scan.nextFloat();
 					if(depositAmount<0)
@@ -65,7 +65,7 @@ public class App {
 				
 
 			
-		}
+		
 
 		
 		

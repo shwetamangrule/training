@@ -1,8 +1,8 @@
-package java.simple.bank;
+package simplejava.bank;
 
 public class Money {
 
-	float money;
+	float money=100;
 
 	public float getMoney() 
 	{

@@ -1,8 +1,8 @@
-package java.simple.bank;
+package simplejava.bank;
 
 public class Period {
 
-	int period;
+	int period=12;
 
 	public int getPeriod()
 	{

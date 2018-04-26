@@ -1,4 +1,4 @@
-package java.simple.bank;
+package simplejava.bank;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,27 +7,28 @@ import java.util.logging.Logger;
 
 public class CheckingAccount implements Account {
 	final static Logger LOGGER = Logger.getLogger(CheckingAccount.class.getName());
-	private Money balance;
+	
 	private InterestRate interestRate;
 	private Period interestPeriod;
 	
-	public void setAll()
-	{
-		balance.setMoney(0);
-		interestRate.setInterestRate(5);
-		interestPeriod.setPeriod(12);
-	}
+//	public void setAll()
+//	{
+//		balance.setMoney(0);
+//		interestRate.setInterestRate(5);
+//		interestPeriod.setPeriod(12);
+//	}		
 	
 	// to withdraw the amount
 	public List withdrawl(float amount) {
-
+		 Money balance=new Money();
 		if (balance.getMoney() > 0) {
 			
-			balance.setMoney(balance.getMoney() - amount);
+			float newsave=balance.getMoney() - amount;
+			LOGGER.info("The balance is" + newsave);
 		}
-		LOGGER.info("The balance is" + balance);
+		
 		Date date = new Date();
-		LOGGER.info("The balance is" + balance);
+		//LOGGER.info("The balance is" + newsave);
 		List list = new ArrayList();
 		list.add(date);
 		return list;
@@ -40,10 +41,16 @@ public class CheckingAccount implements Account {
 
 	// to deposit amount and return a date
 	public List deposit(float amount) {
-		balance.setMoney(balance.getMoney() + amount);
-		LOGGER.info("The balance is" + balance);
+		 Money balance=new Money();
+		System.out.println("entered");
+		//balance.setMoney(100);
+		//balance.setMoney(balance.getMoney() + amount);
+		//interestRate.setInterestRate(5);
+		//interestPeriod.setPeriod(12);
+		float save=balance.getMoney()+amount;
+		LOGGER.info("The balance is" + save);
 		Date date = new Date();
-		LOGGER.info("The balance is" + balance);
+		LOGGER.info("The balance is" + save);
 		List list = new ArrayList();
 		list.add(date);
 		return list;
