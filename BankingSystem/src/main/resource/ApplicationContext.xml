@@ -35,8 +35,15 @@
 		<constructor-arg index="5">
 			<ref bean="Contact" />
 		</constructor-arg>
+		<constructor-arg index="6">
+			<ref bean="bank" />
+		</constructor-arg>
 
 	</bean>
+	
+<!-- 		<bean id="account" class="com.bank.repository.AccountRepoImpl"> -->
+	
+<!-- 	</bean> -->
 
 <bean id="bank" class="com.bank.model.Bank">
 	<property name="bankName" value="SBI"></property>
@@ -47,10 +54,10 @@
 	
 	</bean>
 	
-	<bean id="secviceAccount" class="com.bank.service.AccountServiceImpl">
-	<property name="account" ref="account"></property>
+<!-- 	<bean id="secviceAccount" class="com.bank.service.AccountServiceImpl"> -->
+<!-- 	<property name="account" ref="account"></property> -->
 	
-	 </bean>
+<!-- 	 </bean> -->
 	 
 
 

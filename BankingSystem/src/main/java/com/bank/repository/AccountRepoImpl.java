@@ -33,6 +33,10 @@ public class AccountRepoImpl implements AccountRepo {
 		return map;
 
 	}
+	AccountRepoImpl()
+	{
+		System.out.println("i am in");
+	}
 	@Override
 	public float getBalance() {
 		System.out.println("Enter interestRate:");

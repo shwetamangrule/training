@@ -8,6 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.bank.model.Contact;
 import com.bank.model.Customer;
 import com.bank.repository.AccountRepo;
+import com.bank.service.AccountService;
 import com.bank.service.AccountServiceImpl;
 
 public class control {
@@ -26,8 +27,8 @@ public class control {
 			Customer customer = (Customer) appContext.getBean("Customer");
 			System.out.println(customer.toString());
 			
-			AccountServiceImpl account=(AccountServiceImpl) appContext.getBean("secviceAccount");
-//			AccountService service=(AccountService) appContext.getBean("account");
+			//AccountServiceImpl account=(AccountServiceImpl) appContext.getBean("secviceAccount");
+			AccountService service=(AccountService) appContext.getBean("account");
 //			service.addCustomer(customer);
 }
 }
