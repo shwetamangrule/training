@@ -1,7 +1,7 @@
 package com.bank.model;
 public class Customer extends Account{
 	
-	private String customerId;
+	private static String customerId;
 	private String firstName;
 	private String lastName;
 	private float currentBalance;
@@ -9,7 +9,6 @@ public class Customer extends Account{
 
 	private Contact contact;
 	
-	private Bank bank;
 	
 	public float getCurrentBalance() {
 		return currentBalance;
@@ -20,7 +19,7 @@ public class Customer extends Account{
 
 	
 	public Customer(String customerId, String firstName, String lastName, float currentBalance, Address address,
-			Contact contact,Bank bank) {
+			Contact contact) {
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
@@ -28,7 +27,6 @@ public class Customer extends Account{
 		this.currentBalance = currentBalance;
 		this.address = address;
 		this.contact = contact;
-		this.bank=bank;
 	}
 	public Customer() {
 		// TODO Auto-generated constructor stub
@@ -49,12 +47,12 @@ public class Customer extends Account{
 	@Override
 	public String toString() {
 		return "Customer [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", currentBalance=" + currentBalance + ", address=" + address + ", contact=" + contact + "Bank"+ bank+"]";
+				+ ", currentBalance=" + currentBalance + ", address=" + address + ", contact=" + contact + "]";
 	}
 	/**
 	 * @return the customerId
 	 */
-	public String getCustomerId() {
+	public static String getCustomerId() {
 		return customerId;
 	}
 	/**

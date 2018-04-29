@@ -10,13 +10,9 @@ import com.bank.model.Customer;
 public class AccountRepoImpl implements AccountRepo {
 	
 	Account account=new Account();
-	
 	Scanner sc=new Scanner(System.in);
 	Map<String,Customer> map=new HashMap<String, Customer>();
 	
-	public Map<String, Customer> getMap() {
-		return map;
-	}
 	@Override
 	public float deposit(final int depositAmount) {
 		return account.getBalance()+depositAmount;
@@ -33,10 +29,6 @@ public class AccountRepoImpl implements AccountRepo {
 		return map;
 
 	}
-	AccountRepoImpl()
-	{
-		System.out.println("i am in");
-	}
 	@Override
 	public float getBalance() {
 		System.out.println("Enter interestRate:");
@@ -48,7 +40,7 @@ public class AccountRepoImpl implements AccountRepo {
 		System.out.println("Enter balance:");
 		final int balance=sc.nextInt();
 		account.setBalance(balance);
-		return account.getBalance()+(account.getInterestRate()*account.getBalance()*account.getInterestPeriod()/100);
+		return account.getInterestRate()*account.getBalance()*account.getInterestPeriod()/100;
 
 	}
 	@Override

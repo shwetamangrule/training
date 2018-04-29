@@ -8,8 +8,7 @@ import com.bank.repository.AccountRepoImpl;
 
 public class AccountServiceImpl implements AccountRepo {
 
-public AccountRepo repo;
-	
+	AccountRepo repo=new AccountRepoImpl();
 	@Override
 	public float deposit(int depositAmount) {
 		

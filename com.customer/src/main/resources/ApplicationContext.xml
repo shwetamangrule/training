@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd ">
+                           
+                           
+    
+    <bean id="address" class="com.customer.model.Address">
+    	<constructor-arg index="0" value="sector-20"/>
+        <constructor-arg index="1" value="12356"/>
+        <constructor-arg index="2" value="Mumbai"/>
+    </bean>
+    
+    <bean id="addressRetail" class="com.customer.model.Address">
+    	<constructor-arg index="0" value="kelambakkam"/>
+        <constructor-arg index="1" value="400704"/>
+        <constructor-arg index="2" value="TamilNadu"/>
+    </bean>
+    
+    <bean id="addressSupplier" class="com.customer.model.Supplier">
+    	<constructor-arg index="0" value="kelambakkam"/>
+        <constructor-arg index="1" value="400704"/>
+        <constructor-arg index="2" value="Mumbai"/>
+    </bean>
+   
+   <bean id="customer" class="com.customer.model.Customer">
+    	<constructor-arg index="0" value="101"/>
+        <constructor-arg index="1" value="Tuhin"/>
+        <constructor-arg index="2" >
+        <ref bean="address"/>
+        </constructor-arg>
+        <constructor-arg index="4" value="cash"/>
+    </bean>
+    
+    <bean id="goods" class="com.customer.model.Goods">
+    	<constructor-arg index="0" value="201"/>
+        <constructor-arg index="1" value="fruit"/>
+        <constructor-arg index="2" value="500" />
+        <constructor-arg index="4" value="30"/>
+    </bean>
+    
+    <bean id="retail" class="com.customer.model.Retail">
+    	<constructor-arg index="0" value="SaiRam"/>
+        <constructor-arg index="1" >
+        <ref bean="addressRetail"/>
+        </constructor-arg>
+    </bean>
+    
+    <bean id="supplier" class="com.customer.model.Supplier">
+    	<constructor-arg index="0" value="301"/>
+        <constructor-arg index="1" value="Dmart"/>
+        <constructor-arg index="2" >
+        <ref bean="addressSupplier"/>
+        </constructor-arg>
+        <constructor-arg index="3" value="500" />
+        <constructor-arg index="4" value="501"/>
+        <constructor-arg index="5" value="44444"/>
+        
+    </bean>
+   
+   
+   </beans>                        

@@ -2,12 +2,12 @@ package com.bank.model;
 
 public class Address {
 
-	private static String street;
-	private static String houseNumber;
-	private static String zipCode;
-	private static String city;
+	private String street;
+	private String houseNumber;
+	private String zipCode;
+	private String city;
 
-	public static String getStreet() {
+	public String getStreet() {
 		return street;
 	}
 
@@ -15,7 +15,7 @@ public class Address {
 		this.street = street;
 	}
 
-	public static String getHouseNumber() {
+	public String getHouseNumber() {
 		return houseNumber;
 	}
 
@@ -23,7 +23,7 @@ public class Address {
 		this.houseNumber = houseNumber;
 	}
 
-	public static String getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
@@ -31,7 +31,7 @@ public class Address {
 		this.zipCode = zipCode;
 	}
 
-	public static String getCity() {
+	public String getCity() {
 		return city;
 	}
 
