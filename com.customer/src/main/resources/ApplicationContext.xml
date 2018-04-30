@@ -80,8 +80,8 @@
      <bean id="customerRepo" class="com.customer.repository.CustomerRepoImpl"/>
      
     <bean id="customerService" class="com.customer.service.CustomerServiceImpl">
-    <property name="addGoods" ref="customerRepo">
-    </property>
+<!--     <property name="addGoods" ref="customerRepo"> -->
+<!--     </property> -->
     </bean>
    
    
