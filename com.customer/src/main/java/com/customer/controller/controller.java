@@ -21,6 +21,12 @@ public class controller {
 		custService.addCustomer(customer);
 		custService.addCustomer(customer1);
 		System.out.println(custService.viewCustomer());
+		custService.removeCustomer(customer1);
+		System.out.println(custService.viewCustomer());
+		Customer customerU=(Customer) appContext.getBean("customerU");
+		custService.updateCustomer(customerU);
+		System.out.println(custService.viewCustomer());
+
 		
 	}
 

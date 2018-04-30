@@ -43,6 +43,14 @@
         </constructor-arg>
         <constructor-arg index="3" value="cash"/>
     </bean>
+    <bean id="customerU" class="com.customer.model.Customer">
+    	<constructor-arg index="0" value="101"/>
+        <constructor-arg index="1" value="Ram"/>
+        <constructor-arg index="2" >
+        <ref bean="addressRetail"/>
+        </constructor-arg>
+        <constructor-arg index="3" value="cash"/>
+    </bean>
     
     <bean id="goods" class="com.customer.model.Goods">
     	<constructor-arg index="0" value="201"/>
