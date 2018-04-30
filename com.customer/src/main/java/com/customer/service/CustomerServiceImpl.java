@@ -6,10 +6,11 @@ import com.customer.model.Customer;
 import com.customer.model.Goods;
 import com.customer.model.Supplier;
 import com.customer.repository.CustomerRepo;
+import com.customer.repository.CustomerRepoImpl;
 
 public class CustomerServiceImpl implements CustomerService{
-	
-	CustomerRepo custRepo;
+
+	CustomerRepo custRepo=new CustomerRepoImpl();
 
 	@Override
 	public int addGoods(Goods goods) {
