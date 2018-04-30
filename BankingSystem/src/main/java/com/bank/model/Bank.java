@@ -1,8 +1,8 @@
 package com.bank.model;
 
 public class Bank extends Account {
-	private String bankName;
-		private String branchName;
+	private  String bankName;
+		private  String branchName;
 		
 	
 		/**

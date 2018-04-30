@@ -6,9 +6,10 @@ import com.bank.model.Customer;
 import com.bank.repository.AccountRepo;
 import com.bank.repository.AccountRepoImpl;
 
-public class AccountServiceImpl implements AccountRepo {
+public class AccountServiceImpl implements AccountService {
 
-	AccountRepo repo=new AccountRepoImpl();
+public AccountRepo repo;
+	
 	@Override
 	public float deposit(int depositAmount) {
 		

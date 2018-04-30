@@ -1,21 +1,18 @@
 package com.bank.model;
 public class Contact extends Address{
 	
-	private String phone;
-	private String mobile;
 	private String email;
+	private String mobile;
+	private String phone;
 	
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public String getEmail() {
+		return email;
 	}
 	public String getMobile() {
 		return mobile;
 	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
+	public String getPhone() {
+		return phone;
 	}
 	public Contact() {
 		super();
@@ -26,11 +23,14 @@ public class Contact extends Address{
 		this.mobile = mobile;
 		this.email = email;
 	}
-	public String getEmail() {
-		return email;
-	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	@Override
 	public String toString() {
