@@ -16,7 +16,7 @@ import model.Customer;
 import model.Goods;
 import model.Supplier;
 
-public class ConsumerTeste {
+public class ClassTest {
 
 	ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
