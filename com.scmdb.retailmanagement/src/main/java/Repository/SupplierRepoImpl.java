@@ -26,7 +26,7 @@ public class SupplierRepoImpl implements SupplierRepo {
 	@Override
 	public int updateSupplier(int supplierId, float amount) {
 
-		String query = "UPDATE supplier SET amount='" + amount
+		String query = "UPDATE supplier SET ammount='" + amount
 				+ "' WHERE supplier_id='" + supplierId + "'";
 		return jdbcTemplate.update(query);
 

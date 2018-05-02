@@ -24,10 +24,8 @@ public class CustomerRepoImpl implements CustomerRepo {
 	}
 	@Override
 	public int removeCustomer(int customerId) {
-
-		String query = "DELETE FROM customer WHERE customer_id='" + customerId + "'";
+		String query="DELETE FROM customer WHERE customer_id='" + customerId + "'";
 		return jdbcTemplate.update(query);
-
 	}
 	@Override
 	public int updateCustomer(String paymentMode, int customerId) {
