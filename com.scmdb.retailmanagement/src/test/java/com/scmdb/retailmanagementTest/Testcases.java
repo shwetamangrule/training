@@ -27,73 +27,78 @@ public class Testcases {
     final GoodsService goodsService=ctx.getBean("goodsService",GoodsServiceImpl.class);
 	final RetailerService retailerService= ctx.getBean("retailerService",RetailerServiceImpl.class);
 
-	Customer customer = new Customer(101, "Tuhin", "Wb", "credit", 101);
-	Supplier supplier=new Supplier(104,"patanjali","mumbai",20,112,20,101);
-	Goods goods=new Goods(1002,"kitkat",12,30,104);
+	Customer customer = new Customer(401, "Tuhin", "Wb", "credit", 101);
+	Supplier supplier=new Supplier(504,"patanjali","mumbai",20,112,20,101);
+	Goods goods=new Goods(6002,"kitkat",12,30,104);
 	Retailer retail=new Retailer(101,"Dmart","Mumbai");
 	
 	@org.junit.Test
 	public void addCustomerTest() {
-		
-		int value=customerService.addCustomer(customer);
-		assertEquals(101, value);
+		Customer customer1 = new Customer(801, "Tuhin", "Wb", "credit", 101);
+		int value=customerService.addCustomer(customer1);
+		assertEquals(801, value);
 	}
-//	
-//	@Test 
-//	public void deleteCustomerTest()
-//	{
-//		long value=customerService.removeCustomer(101);
-//		assertEquals(1, value);
-//}
-//
-//  @org.junit.Test
-//public void updateCustomer()
-//{
-//   
-//	Customer customer=new Customer(102,"Arati","moheshpur","debit",103);
-//	customerService.addCustomer(customer);
-//	long value=customerService.updateCustomer("credit", 102);
-//	assertEquals(1, value);
-//}
+	
+	@Test 
+	public void deleteCustomerTest()
+	{
+		long value=customerService.removeCustomer(106);
+		assertEquals(1, value);
+}
 
-//@org.junit.Test
-//public void addSupplier()
-//{
-//   long value=supplierService.addSupplier(supplier);
-//   assertEquals(104,value);
-// }
+  @Test
+public void updateCustomer()
+{
+   
+	Customer customer=new Customer(107,"Arati","moheshpur","debit",103);
+	customerService.addCustomer(customer);
+	long value=customerService.updateCustomer("CASHU", 107);
+	assertEquals(1, value);
+}
 
-//  @org.junit.Test
-//public void updateSupplier()
-//{
-//  long value= supplierService.updateSupplier(104, 40);
-//   assertEquals(1,value);
-//}
-//
-//@org.junit.Test
-//public void deleteSupplier() {
-//   long value=supplierService.removeSupplier(104);
-//   assertEquals(1,value);
-//      }
-///*
- @org.junit.Test
+@Test
+public void addSupplier()
+{
+	Supplier supplier=new Supplier(304,"patanjali","mumbai",20,112,20,101);
+   long value=supplierService.addSupplier(supplier);
+   assertEquals(304,value);
+ }
+
+ @Test
+public void updateSupplier()
+{
+  long value= supplierService.updateSupplier(105, 180);
+   assertEquals(1,value);
+}
+
+@Test
+public void deleteSupplier() {
+	Supplier supplier1=new Supplier(308,"patanjali","mumbai",20,112,20,101);
+	   supplierService.addSupplier(supplier1);
+   long value=supplierService.removeSupplier(308);
+  assertEquals(1,value);
+     }
+
+ @Test
 public void addGoods()
 {
    long value=goodsService.addGoods(goods);
-   assertEquals(1002,value);
+   assertEquals(6002,value);
 }
 
-//@org.junit.Test
-//public void removeGoods()
-//{
-//   long value=goodsService.removeGoods(1002);
-//   assertEquals(1,value);
-//}
+@Test
+public void removeGoods()
+{
+	Goods goods1=new Goods(3002,"kitkat",12,30,104);
+	goodsService.addGoods(goods1);
+  long value=goodsService.removeGoods(2002);
+   assertEquals(1,value);
+}
 
-  /*@org.junit.Test*/
+ 
 @Test
 public void updateGoods() {
-   long value=goodsService.updategoods(1002, 40);
+   long value=goodsService.updategoods(1002, 80);
    assertEquals(1,value);
 }
 
