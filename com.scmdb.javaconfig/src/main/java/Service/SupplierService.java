@@ -1,7 +1,9 @@
 package Service;
 
 import model.Supplier;
-
+/*
+ * supplier service interface
+ */
 public interface SupplierService {
 
 	public int addSupplier(Supplier supplier);

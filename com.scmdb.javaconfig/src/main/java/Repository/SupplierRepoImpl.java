@@ -7,10 +7,17 @@ import model.Supplier;
 public class SupplierRepoImpl implements SupplierRepo {
 
 	JdbcTemplate jdbcTemplate;
+	/*
+	 * jdbc template for connection
+	 */
 	public SupplierRepoImpl(JdbcTemplate jdbcTemplate) {
 		super();
 		this.jdbcTemplate = jdbcTemplate;
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see Repository.SupplierRepo#addSupplier(model.Supplier)
+	 */
 	@Override
 	public int addSupplier(Supplier supplier) {
 
@@ -23,6 +30,10 @@ public class SupplierRepoImpl implements SupplierRepo {
 		jdbcTemplate.update(query);
 		return supplier.getSupplierId();
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see Repository.SupplierRepo#updateSupplier(int, float)
+	 */
 	@Override
 	public int updateSupplier(int supplierId, float amount) {
 
@@ -31,6 +42,10 @@ public class SupplierRepoImpl implements SupplierRepo {
 		return jdbcTemplate.update(query);
 
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see Repository.SupplierRepo#removeSupplier(int)
+	 */
 	@Override
 	public int removeSupplier(int supplierId) {
 

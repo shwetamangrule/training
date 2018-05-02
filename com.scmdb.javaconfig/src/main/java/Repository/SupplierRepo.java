@@ -1,7 +1,9 @@
 package Repository;
 
 import model.Supplier;
-
+/*
+ * methods to implement supplier service logic
+ */
 public interface SupplierRepo {
 
 	public int addSupplier(Supplier supplier);

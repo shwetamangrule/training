@@ -14,17 +14,26 @@ public class RetailerServiceImpl implements RetailerService{
 		super();
 		this.retailerRepo = retailerRepo;
 	}
-	
+	/*
+	 * (non-Javadoc)
+	 * @see Service.RetailerService#viewGoods()
+	 */
 	@Override
 	public List<Goods> viewGoods() {
 		return retailerRepo.viewGoods();
 	}
-	
+	/*
+	 * (non-Javadoc)
+	 * @see Service.RetailerService#viewCustomer()
+	 */
 	@Override
 	public List<Customer> viewCustomer() {
 		return retailerRepo.viewCustomer();
 	}
-	
+	/*
+	 * (non-Javadoc)
+	 * @see Service.RetailerService#viewSupplier()
+	 */
 	@Override
 	public List<Supplier> viewSupplier() {
 

@@ -1,7 +1,9 @@
 package Repository;
 
 import model.Customer;
-
+/*
+ * Interface to implement customerRepo logics
+ */
 public interface CustomerRepo {
 
 	public int addCustomer(Customer customer);

@@ -1,7 +1,9 @@
 package Service;
 
 import model.Goods;
-
+/*
+ * goods service imnterface
+ */
 public interface GoodsService {
 
 	public int addGoods(Goods goods);

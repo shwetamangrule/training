@@ -12,6 +12,10 @@ public class CustomerServiceImpl implements CustomerService {
 		super();
 		this.customerrepo = customerrepo;
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see Service.CustomerService#addCustomer(model.Customer)
+	 */
 	@Override
 	public int addCustomer(Customer customer) {
 
@@ -19,12 +23,19 @@ public class CustomerServiceImpl implements CustomerService {
 
 	}
 
-
+/*
+ * (non-Javadoc)
+ * @see Service.CustomerService#removeCustomer(int)
+ */
 	@Override
 	public int removeCustomer(int customerId) {
 
 		return customerrepo.removeCustomer(customerId);
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see Service.CustomerService#updateCustomer(java.lang.String, int)
+	 */
 	@Override
 	public int updateCustomer(String paymentMode, int customerId) {
 

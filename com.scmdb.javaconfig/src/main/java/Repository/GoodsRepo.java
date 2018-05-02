@@ -1,7 +1,9 @@
 package Repository;
 
 import model.Goods;
-
+/*
+ * interface to implements goods services logic
+ */
 public interface GoodsRepo {
 
 	public int addGoods(Goods goods);

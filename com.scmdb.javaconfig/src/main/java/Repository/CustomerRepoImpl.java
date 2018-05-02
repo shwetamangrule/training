@@ -7,11 +7,17 @@ import model.Customer;
 public class CustomerRepoImpl implements CustomerRepo {
 
 	JdbcTemplate jdbcTemplate;
-	
+	/*
+	 * jdbc template for creating connection
+	 */
 	public CustomerRepoImpl(JdbcTemplate jdbcTemplate) {
 		super();
 		this.jdbcTemplate = jdbcTemplate;
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see Repository.CustomerRepo#addCustomer(model.Customer)
+	 */
 	@Override
 	public int addCustomer(Customer customer) {
 
@@ -22,11 +28,19 @@ public class CustomerRepoImpl implements CustomerRepo {
 		jdbcTemplate.update(query);
 		return customer.getCustomerId();
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see Repository.CustomerRepo#removeCustomer(int)
+	 */
 	@Override
 	public int removeCustomer(int customerId) {
 		String query="DELETE FROM customer WHERE customer_id='" + customerId + "'";
 		return jdbcTemplate.update(query);
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see Repository.CustomerRepo#updateCustomer(java.lang.String, int)
+	 */
 	@Override
 	public int updateCustomer(String paymentMode, int customerId) {
 

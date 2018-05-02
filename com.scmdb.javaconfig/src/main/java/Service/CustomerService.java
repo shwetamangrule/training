@@ -1,7 +1,9 @@
 package Service;
 
 import model.Customer;
-
+/*
+ * customer service methods definition
+ */
 public interface CustomerService {
 
 	public int addCustomer(Customer customer);
