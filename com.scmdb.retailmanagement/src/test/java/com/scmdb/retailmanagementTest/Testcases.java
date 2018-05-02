@@ -32,12 +32,12 @@ public class Testcases {
 	Goods goods=new Goods(1002,"kitkat",12,30,104);
 	Retailer retail=new Retailer(101,"Dmart","Mumbai");
 	
-//	@org.junit.Test
-//	public void addCustomerTest() {
-//		
-//		int value=customerService.addCustomer(customer);
-//		assertEquals(101, value);
-//	}
+	@org.junit.Test
+	public void addCustomerTest() {
+		
+		int value=customerService.addCustomer(customer);
+		assertEquals(101, value);
+	}
 //	
 //	@Test 
 //	public void deleteCustomerTest()
