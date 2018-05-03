@@ -13,7 +13,7 @@ public class Testcases {
 	
 	@org.junit.Test
 	public void addCustomerTest() {
-				assertEquals(221, cntrl.addCustomerControl());
+				assertEquals(261, cntrl.addCustomerControl());
 	}
 	@Test 
 	public void deleteCustomerTest()
@@ -30,7 +30,7 @@ public void updateCustomer()
 public void addSupplier()
 {
 	 
-   assertEquals(311,cntrl.addSupplierControl());
+   assertEquals(361,cntrl.addSupplierControl());
  }
 
   @Test
@@ -49,7 +49,7 @@ public void deleteSupplier() {
 public void addGoods()
 {
 	
-   assertEquals(411,cntrl.addGoodsControl());
+   assertEquals(461,cntrl.addGoodsControl());
 }
 
 @Test
