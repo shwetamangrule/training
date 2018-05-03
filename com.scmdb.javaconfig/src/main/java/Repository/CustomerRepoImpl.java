@@ -1,8 +1,7 @@
 package Repository;
 
-import org.springframework.jdbc.core.JdbcTemplate;
-
 import model.Customer;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 public class CustomerRepoImpl implements CustomerRepo {
 

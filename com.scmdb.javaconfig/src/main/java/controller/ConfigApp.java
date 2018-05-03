@@ -12,12 +12,16 @@ import Repository.CustomerRepo;
 import Repository.CustomerRepoImpl;
 import Repository.GoodsRepo;
 import Repository.GoodsRepoImpl;
+import Repository.RetailerRepo;
+import Repository.RetailerRepoImpl;
 import Repository.SupplierRepo;
 import Repository.SupplierRepoImpl;
 import Service.CustomerService;
 import Service.CustomerServiceImpl;
 import Service.GoodsService;
 import Service.GoodsServiceImpl;
+import Service.RetailerService;
+import Service.RetailerServiceImpl;
 import Service.SupplierService;
 import Service.SupplierServiceImpl;
 
@@ -85,4 +89,17 @@ public class ConfigApp {
 		return supplierService;
 	}
 
+	@Bean(name="RetailerRepo")
+	public RetailerRepo retailerRepo()
+	{
+		RetailerRepo retailerRepo=new RetailerRepoImpl(jdbctemplate());
+		return retailerRepo;
+	}
+	
+	@Bean(name="RetailerService")
+	public RetailerService retailerService()
+	{
+		RetailerService retailerService=new RetailerServiceImpl(retailerRepo());
+		return retailerService;
+	}
 }

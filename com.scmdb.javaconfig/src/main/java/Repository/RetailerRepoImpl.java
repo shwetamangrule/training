@@ -28,7 +28,7 @@ public class RetailerRepoImpl implements RetailerRepo {
 	public List<Goods> viewGoods() {
 
 		List<Goods> goodslist = jdbcTemplate
-				.query("SELECT * goods",new BeanPropertyRowMapper<Goods>(Goods.class));
+				.query("SELECT * from goods",new BeanPropertyRowMapper<Goods>(Goods.class));
 		return goodslist;
 	}
 	/*
