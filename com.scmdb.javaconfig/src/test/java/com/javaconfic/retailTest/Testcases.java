@@ -36,7 +36,7 @@ public void addSupplier()
   @Test
 public void updateSupplier()
 {
- ;
+ 
    assertEquals(1,cntrl.updateSupplierControl());
 }
 
