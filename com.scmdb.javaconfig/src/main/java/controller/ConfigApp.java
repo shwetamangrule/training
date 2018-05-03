@@ -79,7 +79,7 @@ public class ConfigApp {
 		return goodsRepo;
 	}
 	
-	@Bean(name="GoodsService")
+	@Bean(name="oodsService")
 	public GoodsService goodsService()
 	{
 		GoodsService goodsService=new GoodsServiceImpl(goodsRepo());
