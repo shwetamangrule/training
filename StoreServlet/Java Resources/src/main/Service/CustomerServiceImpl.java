@@ -14,7 +14,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	/*
 	 * (non-Javadoc)
-	 * @see Service.CustomerService#addCustomer(model.Customer)
+	 * @see Service.CustomerServicsacce#addCustomer(model.Customer)
 	 */
 	@Override
 	public String addCustomer(Customer customer) {
