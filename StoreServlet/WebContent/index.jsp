@@ -8,8 +8,8 @@
 </head>
 <body>
 <h1>Store Management</h1>
-<a href="storeController?action=addCustomer">Add Customer</a>
+<a href="StoreController?action=addCustomer">Add Customer</a>
 <br>
-<a href="storeController?action=viewAllCustomer">View Customer</a>
+<a href="StoreController?action=viewAllCustomer">View Customer</a>
 </body>
 </html>

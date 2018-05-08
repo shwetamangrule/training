@@ -12,7 +12,7 @@
 <div align="center">
 <h1>Enter Customer Details</h1>
 </div>
-<form action="/storeController"  method="post">
+<form action="StoreController/StoreController"  method="post">
 <table border=1 align="center">
 			<tr>
 				<td><label for="Customer_Id">Customer Id</label></td>
