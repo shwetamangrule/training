@@ -17,7 +17,7 @@
 			<tr>
 				<td><label for="Customer_Id">Customer Id</label></td>
 				<td>
-					<input name="Customer_Id" required="true" placeholder="Customer ID" />
+					<input name="CustomGDDFG" required="true" placeholder="Customer ID" />
 				</td>
 			</tr>
 			<tr>
@@ -52,6 +52,5 @@
 			</tr>
 			</table>
 </form>
-
 </body>
 </html>

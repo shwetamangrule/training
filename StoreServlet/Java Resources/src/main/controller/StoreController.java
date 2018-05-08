@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +22,7 @@ import model.Customer;
 /**
  * Servlet implementation class StoreController
  */
-//@WebServlet("/StoreController")
+@WebServlet("/StoreController")
 public class StoreController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
  
@@ -61,7 +62,7 @@ public class StoreController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("IN POST");
-		String str3 = request.getParameter("Customer_Id");
+		String str3 = request.getParameter("CustomGDDFG");
 	
 		String str4 = request.getParameter("customer_Name");
 		String str5 = request.getParameter("customer_Address");
@@ -73,7 +74,7 @@ public class StoreController extends HttpServlet {
 		
 		String str10 = custService.addCustomer(cust1);
 		System.out.println(str10);
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		request.getRequestDispatcher("error.jsp").forward(request, response);
 		
 		//doGet(request, response);
 	}
