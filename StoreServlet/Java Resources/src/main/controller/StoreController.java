@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -17,13 +16,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import Service.CustomerService;
 import Service.RetailerService;
-import Service.RetailerServiceImpl;
 import model.Customer;
 
 /**
  * Servlet implementation class StoreController
  */
-//@WebServlet("/storeController")
+//@WebServlet("/StoreController")
 public class StoreController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
  
@@ -33,8 +31,9 @@ public class StoreController extends HttpServlet {
 	RetailerService retailerService = (RetailerService) context.getBean("RetailerService");
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		String qStr= request.getParameter("action");
+		System.out.println("IN GET" +qStr);
+		
 			RequestDispatcher dispatch=null;
 
 			if("addCustomer".equals(qStr))
@@ -59,11 +58,13 @@ public class StoreController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		System.out.println("IN POST");
 		String str3 = request.getParameter("Customer_Id");
-		String str4 = request.getParameter("Customer_Name");
-		String str5 = request.getParameter("Customer_Address");
+	
+		String str4 = request.getParameter("customer_Name");
+		String str5 = request.getParameter("customer_Address");
 		String str6 = request.getParameter("payment_Mode");
 		String str7 = request.getParameter("retailer_id");
 		System.out.println(str3);
@@ -72,9 +73,9 @@ public class StoreController extends HttpServlet {
 		
 		String str10 = custService.addCustomer(cust1);
 		System.out.println(str10);
-//		request.getRequestDispatcher("home.jsp").forward(request, response);
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 		
-		doGet(request, response);
+		//doGet(request, response);
 	}
 
 }
