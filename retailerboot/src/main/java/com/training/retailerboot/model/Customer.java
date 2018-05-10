@@ -1,9 +1,25 @@
 package com.training.retailerboot.model;
 
-public class Customer {
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+//@seria
+@Table(name = "customer")
+public class Customer {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "customer_Id")
 	private Integer customer_Id;
+	@Id
+	@Column(name = "customer_name" ,length=100)
 	private String customer_name;
+	@Column(name = "customer_address")
 	private String customer_address;
 	/**
 	 * @param customer_Id

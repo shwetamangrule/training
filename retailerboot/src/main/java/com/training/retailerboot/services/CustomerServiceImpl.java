@@ -2,32 +2,47 @@ package com.training.retailerboot.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.training.retailerboot.model.Customer;
+import com.training.retailerboot.repository.CustomerRepo;
 
 @Service
 public class CustomerServiceImpl {
 
-	Customer cust=new Customer(101,"tuhin","mumbai");
-	Customer cust1=new Customer(102,"tuhin","chennai");
-	List<Customer> custlist=new ArrayList<>();
+	@Autowired
+	private CustomerRepo custRepo;
+	
+	
 	public List<Customer> showall()
 	{
-		
-		custlist.add(cust);
-		custlist.add(cust1);
+		List<Customer> custlist=new ArrayList<>();
+		custRepo.findAll().forEach(custlist::add);
 		return custlist;
 	}
 
-	public Customer getone(String name)
+	public Optional<Customer> getone(String customer_name)
 	{
-		return custlist.stream().filter(t->t.getCustomer_name().equals(name)).findFirst().get();
+		return custRepo.findById(customer_name);
 	}
 
 	public void addcustomer(Customer customer) {
-		custlist.add(customer);
+		custRepo.save(customer);
 		
 	}
+
+	public void updatecustomer(Customer customer,String customer_name) {
+		custRepo.save(customer);
+	}
+
+	public void deletecustomer(String customer_name) {
+		
+		custRepo.deleteById(customer_name);
+		
+	}
+	
+	
 }
