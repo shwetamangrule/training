@@ -1,0 +1,51 @@
+2018-05-14 14:18:35.412  INFO 7800 --- [main] c.t.r.RetailerbootApplication            : Starting RetailerbootApplication on MININT-VU4T12V with PID 7800 (started by trainee in D:\sts project\retailerboot)
+2018-05-14 14:18:35.415  INFO 7800 --- [main] c.t.r.RetailerbootApplication            : No active profile set, falling back to default profiles: default
+2018-05-14 14:18:35.463  INFO 7800 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5ae50ce6: startup date [Mon May 14 14:18:35 IST 2018]; root of context hierarchy
+2018-05-14 14:18:36.470  INFO 7800 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bb9e5fc7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-14 14:18:36.661  INFO 7800 --- [main] org.eclipse.jetty.util.log               : Logging initialized @2364ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-05-14 14:18:36.741  INFO 7800 --- [main] o.s.b.w.e.j.JettyServletWebServerFactory : Server initialized with port: 8082
+2018-05-14 14:18:36.743  INFO 7800 --- [main] org.eclipse.jetty.server.Server          : jetty-9.4.9.v20180320; built: 2018-03-20T17:51:10+05:30; git: 1f8159b1e4a42d3f79997021ea1609f2fbac6de5; jvm 1.8.0_161-b12
+2018-05-14 14:18:36.856  INFO 7800 --- [main] org.eclipse.jetty.server.session         : DefaultSessionIdManager workerName=node0
+2018-05-14 14:18:36.856  INFO 7800 --- [main] org.eclipse.jetty.server.session         : No SessionScavenger set, using defaults
+2018-05-14 14:18:36.858  INFO 7800 --- [main] org.eclipse.jetty.server.session         : Scavenging every 600000ms
+2018-05-14 14:18:36.865  INFO 7800 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring embedded WebApplicationContext
+2018-05-14 14:18:36.865  INFO 7800 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1402 ms
+2018-05-14 14:18:36.966  INFO 7800 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-14 14:18:36.970  INFO 7800 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-14 14:18:36.970  INFO 7800 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-14 14:18:36.970  INFO 7800 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-14 14:18:36.971  INFO 7800 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-14 14:18:36.977  INFO 7800 --- [main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@2873d672{/,[file:///C:/Users/trainee/AppData/Local/Temp/jetty-docbase.3774062729781314271.8082/],AVAILABLE}
+2018-05-14 14:18:36.978  INFO 7800 --- [main] org.eclipse.jetty.server.Server          : Started @2682ms
+2018-05-14 14:18:37.106  INFO 7800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-14 14:18:37.569  INFO 7800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-14 14:18:37.610  INFO 7800 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-14 14:18:37.622  INFO 7800 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-14 14:18:37.818  INFO 7800 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2018-05-14 14:18:37.820  INFO 7800 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-14 14:18:37.870  INFO 7800 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-14 14:18:38.003  INFO 7800 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-05-14 14:18:38.396  INFO 7800 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-14 14:18:38.716  INFO 7800 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-14 14:18:38.971  INFO 7800 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5ae50ce6: startup date [Mon May 14 14:18:35 IST 2018]; root of context hierarchy
+2018-05-14 14:18:39.000  WARN 7800 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-14 14:18:39.034  INFO 7800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/showallcustomer/{customer_name}]}" onto public org.springframework.http.ResponseEntity<com.training.retailerboot.model.Customer> com.training.retailerboot.controller.Controller.getOne(java.lang.String)
+2018-05-14 14:18:39.035  INFO 7800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/showallcustomer]}" onto public java.util.List<com.training.retailerboot.model.Customer> com.training.retailerboot.controller.Controller.showall()
+2018-05-14 14:18:39.035  INFO 7800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addcustomer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> com.training.retailerboot.controller.Controller.addcustomer(com.training.retailerboot.model.Customer)
+2018-05-14 14:18:39.036  INFO 7800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/updatecustomer/{customer_name}],methods=[PUT]}" onto public void com.training.retailerboot.controller.Controller.updatecustomer(com.training.retailerboot.model.Customer,java.lang.String)
+2018-05-14 14:18:39.036  INFO 7800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deletecustomer/{customer_name}],methods=[DELETE]}" onto public void com.training.retailerboot.controller.Controller.deletecustomer(java.lang.String)
+2018-05-14 14:18:39.039  INFO 7800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-14 14:18:39.040  INFO 7800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-14 14:18:39.068  INFO 7800 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-14 14:18:39.069  INFO 7800 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-14 14:18:39.354  INFO 7800 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-14 14:18:39.355  INFO 7800 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-14 14:18:39.362  INFO 7800 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-14 14:18:39.377  INFO 7800 --- [main] o.e.j.s.h.ContextHandler.application     : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-14 14:18:39.377  INFO 7800 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-14 14:18:39.389  INFO 7800 --- [main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2018-05-14 14:18:39.410  INFO 7800 --- [main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@383cb5ce{HTTP/1.1,[http/1.1]}{0.0.0.0:8082}
+2018-05-14 14:18:39.413  INFO 7800 --- [main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8082 (http/1.1) with context path '/'
+2018-05-14 14:18:39.416  INFO 7800 --- [main] c.t.r.RetailerbootApplication            : Started RetailerbootApplication in 4.377 seconds (JVM running for 5.12)

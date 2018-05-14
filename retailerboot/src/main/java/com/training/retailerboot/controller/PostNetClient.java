@@ -23,7 +23,7 @@ public class PostNetClient {
 
 		
 		
-		String input= "{ \"customer_Id\": 105,\"customer_name\": \"abhishekjais\",\"customer_address\": \"delhiss\"}";
+		String input= "{ \"customer_Id\": 105,\"customer_name\": \"ritikaverma\",\"customer_address\": \"deddd\"}";
 				      
 		OutputStream os = conn.getOutputStream();
 		os.write(input.getBytes());

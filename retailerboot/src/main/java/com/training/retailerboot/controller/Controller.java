@@ -44,12 +44,12 @@ public class Controller {
 	return new ResponseEntity<Customer>(cust,HttpStatus.CREATED); 
 	}
 	@RequestMapping(value="/addcustomer" ,method=RequestMethod.POST)
-	public ResponseEntity<Customer> addcustomer(@RequestBody Customer customer)
+	public ResponseEntity<?> addcustomer(@RequestBody Customer customer)
 	{
 		 Customer cust=customerservice.addcustomer(customer);
 		 if((customer.getCustomer_Id()==null)|| (customer.getCustomer_name()==null)||customer.getCustomer_address()==null)
 			{
-				throw new MyException("unable to insert");
+				return new ResponseEntity<String>("not present",HttpStatus.NOT_FOUND);
 			}
 			else
 			{
