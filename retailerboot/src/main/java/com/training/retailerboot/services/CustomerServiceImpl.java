@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.training.retailerboot.exception.MyException;
 import com.training.retailerboot.model.Customer;
 import com.training.retailerboot.repository.CustomerRepo;
 
@@ -24,14 +25,24 @@ public class CustomerServiceImpl {
 		return custlist;
 	}
 
-	public Optional<Customer> getone(String customer_name)
+	public Customer getone(String customer_name) throws MyException
 	{
-		return custRepo.findById(customer_name);
+		Customer cust;
+		Optional<Customer> givenCust=custRepo.findById(customer_name);
+		if(givenCust.isPresent())
+		{
+			cust=givenCust.get();
+			return cust;
+		}
+		else
+		{
+			throw new MyException("Customer not present");
+		}
 	}
 
-	public void addcustomer(Customer customer) {
-		custRepo.save(customer);
-		
+	public Customer addcustomer(Customer customer) {
+		Customer cust=custRepo.save(customer);
+		return cust;
 	}
 
 	public void updatecustomer(Customer customer,String customer_name) {

@@ -1,19 +1,18 @@
 package com.training.retailerboot.model;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+import com.training.retailerboot.annotation.AnnotationMy;
 
+@AnnotationMy(name="tuhin")
+@Entity
 @Table(name = "customer")
 public class Customer {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "customer_Id")
 	private Integer customer_Id;
 	@Id

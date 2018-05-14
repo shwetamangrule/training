@@ -7,8 +7,8 @@ import com.training.retailerboot.model.Customer;
 
 public interface CustomerRepo extends CrudRepository<Customer,String> {
 
-	@Query
-	public Customer getByName(String customerName);
+//	@Query
+//	public Customer getByName(String customerName);
 	
 	
 }
