@@ -74,5 +74,10 @@ public class Customer {
 	public void setCustomer_address(String customer_address) {
 		this.customer_address = customer_address;
 	}
+	@Override
+	public String toString() {
+		return "Customer [customer_Id=" + customer_Id + ", customer_name=" + customer_name + ", customer_address="
+				+ customer_address + "]";
+	}
 
 }

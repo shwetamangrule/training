@@ -32,7 +32,7 @@ public class Controller {
 		return customerservice.showall();
 	}
 	@RequestMapping("/showallcustomer/{customer_name}")
-	public ResponseEntity<Customer> getOne(@PathVariable String customer_name)
+	public ResponseEntity<Customer> getOne(@PathVariable("customer_name") String customer_name)
 	{	
 		Customer cust=customerservice.getone(customer_name);
 	if(customer_name==null)
